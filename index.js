@@ -29,8 +29,9 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function(input) {
-    console.log('input',input)
-  const [op, key, value] = input.split(" ");
+    // console.log('input',input)
+  const [op, key, value] = input.split(/\s/);
+//   console.log('op',op)
   if (op === 'get') {
     get(key)
   } else if (op === 'set') {
